@@ -1,5 +1,7 @@
 :root{
     --fuentePrincipal: "Roboto Condensed", sans-serif;
+    --primario: #ae1f1a9c;
+    --primarioClaro: #ae1f1ad5;
 }
 
 *, *:before, *:after {
@@ -70,7 +72,7 @@ body{
 .boton{
     display: inline-block;
     color: white;
-    background-color: rgba(174, 31, 26, 0.612);
+    background-color: var(--primario);
     border-radius: .5rem;
     margin: 0;
     padding: 1rem 3rem;
@@ -81,21 +83,40 @@ body{
     border: none;
     text-transform: uppercase;
     font-size: 1.8rem;
+    transition: background-color .5s ease-in-out;
+    transition: font-size 4s ease-in-out;
 }
 
+
 .boton:hover{
+    background-color: var(--primarioClaro);
     cursor: pointer;
 }
 
 footer {
     text-align: center;
-    margin: 4rem 2rem 2rem;
+    margin: 4rem 2rem;
     background: #1e1e1e;
     color: #666;
-    font-size: 1rem;
+    font-size: 2rem;
+}
+
+
+footer a:hover{
+    font-size: 10rem;
+}
+
+footer img{
+    transition: all 3s ease-in-out;
+}
+
+footer img:hover{
+    width: 100%;
+    height: 100%;
 }
 
 footer a {
     color: #666;
     text-decoration: none;
+    transition: font-size 3s ease-in-out;
 }
