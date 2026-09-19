@@ -127,10 +127,11 @@ body{
     width: 90%;
     text-align: center;
     border: none;
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 1.8rem;
-    transition: background-color .5s ease-in-out;
-    transition: font-size 4s ease-in-out;
+    transition: font-size 4s ease-in-out, background-color .5s ease-in-out;
+
 }
 
 
@@ -149,7 +150,7 @@ footer {
 
 
 footer a:hover{
-    font-size: 10rem;
+    font-size: 12rem;
 }
 
 footer img{

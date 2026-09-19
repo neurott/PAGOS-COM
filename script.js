@@ -22,14 +22,14 @@ cuentas.forEach(cuenta => {
     p.textContent = cuenta.nombre;
     
     const a = document.createElement("a");
+
     a.href = cuenta.url;
     a.target = "_blank";
 
-    const boton = document.createElement("button");
-    boton.classList.add("boton");
-    boton.textContent = "Pagar ahora";
+    a.classList.add("boton");
+    a.textContent = "pagar ahora";
 
-    a.appendChild(boton);
+
     div.appendChild(p);
     div.appendChild(a);
 
