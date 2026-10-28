@@ -18,11 +18,11 @@ const grid = document.querySelector(".grid");
 cuentas.forEach(cuenta => {
 
     const div = document.createElement("div");
-    div.classList.add("pagina");   
-    
+    div.classList.add("pagina");
+
     const p = document.createElement("p");
     p.textContent = cuenta.nombre;
-    
+
     const a = document.createElement("a");
 
     a.href = cuenta.url;
@@ -35,15 +35,15 @@ cuentas.forEach(cuenta => {
     div.appendChild(p);
     div.appendChild(a);
 
-    
+
     grid.appendChild(div);
-        
+
 
 });
 
 const select = document.querySelector("#cuenta");
 
-cuentas.forEach(cuenta =>{
+cuentas.forEach(cuenta => {
     const option = document.createElement("option");
     option.value = cuenta.nombre;
     option.textContent = cuenta.nombre;
@@ -56,13 +56,13 @@ const formulario = document.querySelector("#formulario-pago");
 const inputMonto = document.querySelector("#monto");
 
 formulario.addEventListener("submit", (e) => {
-    
+
     e.preventDefault();
 
     const cuenta = select.value;
     const monto = Number(inputMonto.value);
 
-    if(monto <= 0){
+    if (monto <= 0) {
         console.log("EL MONTO DEBE SER MAYOR A CERO");
         return;
     }
@@ -78,17 +78,29 @@ formulario.addEventListener("submit", (e) => {
 
     localStorage.setItem("pagos", JSON.stringify(pagos));
 
-  
-    
+    renderPagos();
 
-   
+    formulario.reset();
+
+
 });
 
 
+const lista = document.querySelector("#lista-pagos");
 
+function renderPagos() {
 
+    lista.innerHTML = "";
 
+    pagos.forEach(pago => {
+        const li = document.createElement("li");
 
+        li.textContent = `${pago.cuenta} - $${pago.monto} - ${pago.fecha}`;
+        lista.appendChild(li);
 
+    })
+};
+
+renderPagos();
 
 

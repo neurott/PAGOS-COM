@@ -43,76 +43,12 @@ body{
     border-bottom: 1px solid #666;
 }
 
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-@media (min-width: 768px) { 
-    .pagina{
-        border-bottom: none;
-    }
-    .boton{
-        width: auto;
-        font-size: 2rem;
-    } 
-}
-
 .grid{
     display: grid;
     padding: 0;
     max-width: 100%;
     margin: 0 auto;
     grid-template-columns: 1fr;
-}
-
-@media (min-width: 768px) {
-    .grid{
-        grid-template-columns: repeat(2,1fr);
-        gap:1rem;
-        max-width: 700px;
-    }    
 }
 
 .boton{
@@ -131,9 +67,8 @@ body{
     text-transform: uppercase;
     font-size: 1.8rem;
     transition: font-size 4s ease-in-out, background-color .5s ease-in-out;
-
+    
 }
-
 
 .boton:hover{
     background-color: var(--primarioClaro);
@@ -148,7 +83,6 @@ footer {
     font-size: 2rem;
 }
 
-
 footer a:hover{
     font-size: 12rem;
 }
@@ -157,13 +91,23 @@ footer img{
     transition: all 3s ease-in-out;
 }
 
-footer img:hover{
-    width: 100%;
-    height: 100%;
-}
 
 footer a {
     color: #666;
     text-decoration: none;
     transition: font-size 3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+        gap:1rem;
+        max-width: 700px;
+    }    
+    .pagina{
+        border-bottom: none;
+    }
+    .boton{
+        width: auto;
+    }
 }
